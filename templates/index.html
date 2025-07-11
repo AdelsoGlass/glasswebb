@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adelsö Glass</title>
+</head>
+<body>
+    <h1>Välkommen till Adelsö Glass!</h1>
+    <form method="post">
+        <p>Ditt namn: <input name="namn" required></p>
+        <p>Välj dina glassorter:</p>
+        {% for glass in glassar %}
+            <label>
+                <input type="checkbox" name="glass" value="{{ glass.namn }}">
+                {{ glass.namn }} ({{ glass.pris }} kr)
+            </label><br>
+        {% endfor %}
+        <button type="submit">Beställ</button>
+    </form>
+</body>
+</html>

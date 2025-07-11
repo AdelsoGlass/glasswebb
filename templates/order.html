@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Beställ Glass</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; background: #f5f5f5; }
+    form { background: white; padding: 2em; border-radius: 10px; max-width: 400px; }
+    label { display: block; margin-top: 1em; }
+    button { margin-top: 1.5em; padding: 0.5em 1em; }
+  </style>
+</head>
+<body>
+  <h1>Beställ din glass</h1>
+  <form action="/order" method="post">
+    <label for="namn">Namn:</label>
+    <input type="text" id="namn" name="namn" required>
+
+    <label for="adress">Adress:</label>
+    <input type="text" id="adress" name="adress" required>
+
+    <label>Välj glassmak:</label>
+    <input type="checkbox" name="smaker" value="Jordgubb"> Jordgubb<br>
+    <input type="checkbox" name="smaker" value="Choklad"> Choklad<br>
+    <input type="checkbox" name="smaker" value="Vanilj"> Vanilj<br>
+    <input type="checkbox" name="smaker" value="Citron"> Citron<br>
+
+    <button type="submit">Skicka beställning</button>
+  </form>
+</body>
+</html>

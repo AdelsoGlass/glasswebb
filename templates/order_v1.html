@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tack för din beställning</title>
+</head>
+<body>
+    <h1>Tack {{ namn }}!</h1>
+    <p>Du har beställt:</p>
+    <ul>
+        {% for g in beställning %}
+            <li>{{ g }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Tillbaka</a>
+</body>
+</html>
